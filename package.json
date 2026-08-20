@@ -1,0 +1,23 @@
+{
+  "name": "@ballast/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens for Ballast — single source of truth for web and Swift targets",
+  "type": "module",
+  "main": "./dist/tokens.js",
+  "types": "./dist/tokens.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.js"
+    },
+    "./theme.css": "./dist/theme.css",
+    "./tokens.json": "./dist/tokens.json"
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "node build.js",
+    "prepare": "node build.js"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
