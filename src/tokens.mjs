@@ -55,6 +55,17 @@ export const border = {
   focus: '#47679e',     // border.focused
 };
 
+/**
+ * Contrast against bg.base (#282c33), measured:
+ *   primary   10.57  AA
+ *   secondary  6.37  AA
+ *   muted      4.08  AA-large only — 11px+ or secondary text, never body copy
+ *   disabled   2.32  FAILS — decorative only (line numbers, aria-hidden marks)
+ *
+ * `accent.comment` shares the disabled value and the same restriction. It is
+ * right for gutter line numbers and wrong for anything meant to be read.
+ * On bg.elevated everything drops ~1.4 points; muted fails there entirely.
+ */
 export const text = {
   primary: '#dce0e5',
   secondary: '#a9afbc',  // text.muted — labels
